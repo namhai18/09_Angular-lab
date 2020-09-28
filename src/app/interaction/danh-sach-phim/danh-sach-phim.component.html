@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let phim of danhSachPhim">
+      <app-chi-tiet-phim
+        (eventLike)="like($event)"
+        (eventDiscount)="handleDiscount($event)"
+        [phim]="phim"
+      ></app-chi-tiet-phim>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Danh sách like</h3>
+      <p *ngFor="let item of danhSachLike">
+        {{ item.tenPhim }} - {{ item.soLike }}
+      </p>
+    </div>
+  </div>
+  <div (click)="viewChildren()" class="btn btn-primary">ViewChildren</div>
+</div>

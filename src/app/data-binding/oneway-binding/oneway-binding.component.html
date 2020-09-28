@@ -1,0 +1,12 @@
+<p>{{ name }}</p>
+
+<button (click)="changeName('Worlds')" class="btn btn-success">
+  Click
+</button>
+
+<!-- <input type="text" value="{{ name }}" /> -->
+<input type="text" [value]="name" #fullName />
+
+<button (click)="changeName(fullName.value)" class="btn btn-primary">
+  Change
+</button>

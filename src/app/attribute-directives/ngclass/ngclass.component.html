@@ -1,0 +1,15 @@
+
+<!-- mauChuClass: tên class - mauChu: là biến từ component, nếu true class sẽ được gắn vào thẻ -->
+<p [ngClass]="{ mauChuClass: mauChu, fontChuClass: fontChu }">
+  ngclass works!
+</p>
+
+<button (click)="toggleColor()">Toggle mau chu</button>
+<button (click)="toggleFontSize()">Toggle font chu</button>
+
+<!-- <app-ghe [ngClass]="{selected: status}"></app-ghe> -->
+
+<div
+  style="height: 500px;"
+  [ngStyle]="{ 'background-image': 'url(' + urlImg + ')' }"
+></div>

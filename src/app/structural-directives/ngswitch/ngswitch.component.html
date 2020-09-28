@@ -1,0 +1,23 @@
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'" style="background: red;">Red</div>
+  <div *ngSwitchCase="'blue'" style="background: blue;">Blue</div>
+  <div *ngSwitchCase="'yellow'" style="background: yellow;">Yellow</div>
+  <div *ngSwitchCase="'pink'" style="background: pink;">Pink</div>
+  <div *ngSwitchCase="'green'" style="background: green;">Green</div>
+  <div *ngSwitchDefault style="background: black; color: white;">
+    Black mac dinh
+  </div>
+</div>
+
+<select
+  #colorSelector
+  [value]="color"
+  (change)="handleChangeColor(colorSelector.value)"
+>
+  <option value="">Vui long chon mau</option>
+  <option value="red">Red</option>
+  <option value="blue">Blue</option>
+  <option value="yellow">yellow</option>
+  <option value="pink">pink</option>
+  <option value="green">green</option>
+</select>

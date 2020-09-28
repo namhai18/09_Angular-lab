@@ -1,0 +1,19 @@
+<button (click)="login()">Login</button>
+<button (click)="logout()">Logout</button>
+<button (click)="toggleLogin()">Toggle Login</button>
+
+<p *ngIf="isLoggedIn">Bạn đã đăng nhập thành công</p>
+
+<br />
+<br />
+<br />
+
+<div *ngIf="!isRegister; else loginTemplate">
+  <p>Login: Nhập tài khoản mật khẩu</p>
+  <button (click)="dangKy()">Đăng ký</button>
+</div>
+
+<ng-template #loginTemplate>
+  <p>Register: Đăng ký tài khoản mật khẩu</p>
+  <button (click)="dangNhap()">Đăng Nhập</button>
+</ng-template>
